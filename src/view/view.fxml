@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RootController">
+	<children>
+		<HBox>
+			<children>
+				<VBox>
+					<padding>
+						<Insets bottom="10" left="20" right="20" top="10" />
+					</padding>
+					<spacing>10</spacing>
+					<children>
+						<HBox>    <!-- HBox 컨테이너 선언 -->
+							<children>	<!-- 자식 컨트롤 추가 -->
+								<Label text="성 적 입 력" />
+							</children>
+						</HBox>
+						<HBox>
+							<spacing>10</spacing>
+							<children>	<!-- 자식 컨트롤 추가 -->
+								<Label text="성명 : " />
+								<TextField fx:id="txtName" prefWidth="70" />
+								<Label text="학년:" />
+                        <ComboBox fx:id="cmbLevel" prefHeight="23.0" prefWidth="38.0" />
+								<Label text="반:" />
+								<TextField fx:id="txtBan" prefHeight="23.0" prefWidth="24.0" />
+							</children>
+						</HBox>
+                  <HBox spacing="10">
+                     <children>
+                        <Label text="성별 : " />
+                        <RadioButton fx:id="rdoMale" mnemonicParsing="false" text="남" />
+                        <RadioButton fx:id="rdoFemale" mnemonicParsing="false" text="여" />
+                     </children>
+                  </HBox>
+						<HBox>
+							<spacing>10</spacing>
+							<children>	<!-- 자식 컨트롤 추가 -->
+								<Label text="국어 : " />
+								<TextField fx:id="txtKo" prefWidth="70" />
+								<Label text="영어 : " />
+								<TextField fx:id="txtEng" prefWidth="70" />
+							</children>
+						</HBox>
+						<HBox>
+							<spacing>10</spacing>
+							<children>	<!-- 자식 컨트롤 추가 -->
+								<Label text="수학 : " />
+								<TextField fx:id="txtMath" prefWidth="70" />
+								<Label text="과학 : " />
+								<TextField fx:id="txtSic" prefWidth="70" />
+							</children>
+						</HBox>
+						<HBox>
+							<spacing>10</spacing>
+							<children>	<!-- 자식 컨트롤 추가 -->
+								<Label text="사회 : " />
+								<TextField fx:id="txtSoc" prefWidth="70" />
+								<Label text="음악 : " />
+								<TextField fx:id="txtMusic" prefWidth="70" />
+							</children>
+						</HBox>
+						<HBox>
+							<spacing>10</spacing>
+							<children>	<!-- 자식 컨트롤 추가 -->
+								<Label text="------------------------------------" />
+							</children>
+						</HBox>
+						<HBox> 	<!-- HBox 컨테이너 선언 -->
+							<children>	<!-- 자식 컨트롤 추가 -->
+								<Label text="성 적 출 력" />
+							</children>
+						</HBox>
+						<HBox>
+							<spacing>10</spacing>
+							<children>	<!-- 자식 컨트롤 추가 -->
+								<Label text="총점 : " />
+								<TextField fx:id="txtTotal" prefWidth="70" />
+								<Label text="평균 : " />
+								<TextField fx:id="txtAvg" prefWidth="70" />
+							</children>
+						</HBox>
+						<HBox>
+							<spacing>10</spacing>
+							<children>	<!-- 자식 컨트롤 추가 -->
+								<Label text="------------------------------------" />
+							</children>
+						</HBox>
+						<HBox alignment="center">
+							<spacing>10</spacing>
+							<children>	<!-- 자식 컨트롤 추가 -->
+								<Button fx:id="btnTotal">총 점</Button>
+								<Button fx:id="btnAvg">평 균</Button>
+								<Button fx:id="btnInit">초기화</Button>
+								<Button fx:id="btnOk">등 록</Button>
+							</children>
+						</HBox>
+                  <HBox alignment="center" spacing="10">
+                     <children>
+                        <Button fx:id="btnEdit" text="수 정" />
+                        <Button fx:id="btnDelete" text="삭 제" />
+                        <Button fx:id="btnExit" text="종 료" />
+                        <Button fx:id="btnList" text="리스트" />
+                     </children>
+                  </HBox>
+					</children>
+				</VBox>
+
+				<VBox>
+					<padding>
+						<Insets bottom="20" left="10" right="10" top="10" />
+					</padding>
+					<children>
+						<Label text="성적 테이블" />
+                  <HBox>
+                     <children>
+                        <TextField fx:id="txtSearch" prefHeight="23.0" prefWidth="82.0" promptText="성명" />
+                        <Button fx:id="btnSearch" mnemonicParsing="false" text="검색" />
+                        <Button fx:id="btnBarChart" mnemonicParsing="false" text="바챠트" />
+                        <DatePicker fx:id="dpDate" />
+                     </children>
+                  </HBox>
+						<TableView fx:id="tableView" prefHeight="270" prefWidth="530.0">
+						</TableView>
+					</children>
+				</VBox>
+			</children>
+		</HBox>
+	</children>
+	<padding>
+		<Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+	</padding>
+
+
+
+	<!-- TODO Add Nodes -->
+</AnchorPane>
